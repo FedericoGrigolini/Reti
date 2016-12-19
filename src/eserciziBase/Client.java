@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Client {
 
@@ -14,9 +15,9 @@ public class Client {
 		Socket s = null;
 		BufferedReader inputStream = null;
 		PrintStream outputStream = null;
-		
+		String str= new Scanner(System.in).nextLine();
 		try {
-			s = new Socket("localhost", 11111); // IP e porta del server 
+			s = new Socket("localhost", 1025); // IP e porta del server 
 			inputStream = new BufferedReader(new InputStreamReader(s.getInputStream())); 
 		} catch (IOException e) { 
 			System.out.println(e.getMessage()); 
